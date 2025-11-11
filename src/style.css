@@ -1,88 +1,160 @@
+/* Import Montserrat from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
 body {
-  background-color: #283618;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; /* bold headings */
+}
+
+p,
+a,
+.form-text-input {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400; /* normal body text */
+}
+
+body {
+  background-color: #1f1016; /* very dark burgundy */
+  margin: 0;
+  padding: 0;
+  color: #f2dede; /* soft blush for text fallback */
 }
 
 a {
-  color: #606c38;
+  color: #c88ca3; /* muted pink links */
   text-decoration: none;
   font-weight: bold;
 }
 
 .container {
   margin: 100px auto;
-  max-width: 600px;
+  max-width: 650px;
+  padding: 0px 20px;
 }
 
 header {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 h1 {
   text-align: center;
-  color: white;
-  font-size: 36px;
+  color: #e0a3b0; /* dusty rose heading */
+  font-size: 42px;
+  font-weight: 700;
   line-height: 1.5;
+}
+
+.form-container {
+  padding: 35px;
+  background-color: #2d1b23; /* dark muted mauve */
+  border-radius: 12px;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.22);
 }
 
 form {
   display: flex;
-  padding: 30px;
-  background-color: #606c38;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  gap: 10px;
 }
 
 .form-text-input {
-  padding: 15px;
-  font-size: 16px;
-  border: none;
+  padding: 16px 20px;
+  font-size: 17px;
+  border: 2px solid transparent;
   border-radius: 30px;
-  width: 80%;
-  margin-right: 10px;
-  line-height: 1.5;
-  background-color: white;
+  width: 100%;
+  background-color: #3a1f2b; /* dark input background */
+  color: #f2dede; /* text color */
+  transition: 200ms;
+}
+
+.form-text-input:focus {
+  border-color: #e0a3b0; /* blush highlight on focus */
+  outline: none;
 }
 
 .submit-button {
-  padding: 15px 30px 15px 30px;
-  font-size: 16px;
-  border: 1px solid #283618;
+  padding: 16px 30px;
+  font-size: 17px;
+  font-weight: 500;
+  border: 2px solid transparent;
   border-radius: 30px;
-  box-sizing: border-box;
-  width: 22%;
-  line-height: 1.5;
-  background-color: #283618;
-  color: white;
+  background-color: #c88ca3; /* muted pink button */
+  color: #1f1016; /* dark text */
   transition: 200ms ease-in-out;
+  box-shadow: 0px 4px 0px #a63a53; /* darker pink shadow */
 }
 
 .submit-button:hover {
-  color: white;
-  border: 1px solid white;
+  background-color: #e0a3b0; /* lighter pink hover */
+  border-color: #e0a3b0;
   cursor: pointer;
 }
 
 .submit-button:active {
   transform: translateY(3px);
-  box-shadow: 0px 1px 0px #d3cfb6;
+  box-shadow: 0px 1px 0px #a63a53;
+}
+
+.hint {
+  color: rgba(224, 163, 176, 0.7); /* semi-transparent blush hint */
+  padding-top: 15px;
+  font-size: 14px;
 }
 
 #poem {
-  padding: 30px;
+  padding: 35px;
   font-size: 20px;
-  background-color: #606c38;
-  color: white;
-  margin-top: 30px;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background-color: #2d1b23; /* dark poem container */
+  color: #f2dede; /* soft blush text */
+  margin-top: 35px;
+  border-radius: 12px;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.22);
   line-height: 1.5;
-  border-left: 3px solid white;
+  border-left: 4px solid #e0a3b0; /* accent blush border */
+  animation: poem-fade-in 0.8s ease forwards;
+  opacity: 0;
+  white-space: pre-line;
+}
+
+@keyframes poem-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blink {
+  animation: gentle-blink 1.9s ease-in-out infinite;
+  font-style: italic;
+}
+
+@keyframes gentle-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
 }
 
 footer {
   text-align: center;
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.417);
-  margin-top: 30px;
+  color: rgba(242, 222, 222, 0.45); /* soft muted blush footer */
+  margin-top: 40px;
+}
+
+.hidden {
+  display: none;
 }
