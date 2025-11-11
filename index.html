@@ -4,40 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Poem Generator</title>
-    <style src="src/style.css"></style>
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <header>
-      <h1>AI Poem Generator</h1>
-    </header>
-    <form>
-      <input
-        type="text"
-        placeholder="Poem topic"
-        autofocus
-        autocomplete="off"
-        required
-      />
-      <input type="submit" />
-    </form>
-    <div>
-      Of morning light the rivers sing, <br />
-      Soft winds awaken everything, <br />
-      And quiet hope begins to ring.
+    <div class="container">
+      <header>
+        <h1>AI Poem Generator</h1>
+      </header>
+      <form>
+        <input
+          type="text"
+          placeholder="Poem topic"
+          autofocus
+          autocomplete="off"
+          required
+          class="form-text-input"
+        />
+        <input type="submit" class="submit-button" />
+      </form>
+      <div class="poem">
+        Of morning light the rivers sing, <br />
+        Soft winds awaken everything, <br />
+        And quiet hope begins to ring.
+      </div>
+      <footer>
+        This project was coded by
+        <a href="https://github.com/samanthabh" target="_blank"
+          >Samantha Burfield-Haar</a
+        >, is
+        <a
+          href="https://github.com/samanthabh/ai-poem-generator"
+          target="_blank"
+          >open-sourced on Github</a
+        >
+        and deployed on
+        <a href="https://sbh-ai-poem-generator.netlify.app/" target="_blank"
+          >Netlify</a
+        >.
+      </footer>
     </div>
-    <footer>
-      This project was coded by
-      <a href="https://github.com/samanthabh" target="_blank"
-        >Samantha Burfield-Haar</a
-      >, is
-      <a href="https://github.com/samanthabh/ai-poem-generator" target="_blank"
-        >open-sourced on Github</a
-      >
-      and deployed on
-      <a href="https://sbh-ai-poem-generator.netlify.app/" target="_blank"
-        >Netlify</a
-      >.
-    </footer>
     <script src="src/index.js"></script>
   </body>
 </html>
